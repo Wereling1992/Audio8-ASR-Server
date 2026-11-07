@@ -1,0 +1,30 @@
+services:
+  audio8-asr:
+    build: .
+    image: wereling1992/audio8-asr-server:latest
+    container_name: audio8-asr-server
+    ports:
+      - "${PORT:-8000}:8000"
+    environment:
+      - AUDIO8_API_KEY=${AUDIO8_API_KEY:-changeme}
+      - AUDIO8_TIMEOUT=${AUDIO8_TIMEOUT:-120}
+      - ASR_CACHE_PRECISION=${ASR_CACHE_PRECISION:-int8}
+      - ASR_AUDIO_PRECISION=${ASR_AUDIO_PRECISION:-int8}
+      - ASR_BACKEND=${ASR_BACKEND:-auto}
+      - ORT_PROVIDER=${ORT_PROVIDER:-CPUExecutionProvider}
+      - HOST=0.0.0.0
+      - PORT=8000
+      - AUDIO8_ASR_BUNDLE=/models/model_bundle
+      - FORCE_DOWNLOAD=${FORCE_DOWNLOAD:-0}
+    volumes:
+      - audio8-models:/models
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 3G
+        reservations:
+          memory: 1.5G
+
+volumes:
+  audio8-models:

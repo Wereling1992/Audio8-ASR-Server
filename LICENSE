@@ -1,0 +1,17 @@
+Creative Commons Attribution-NonCommercial 4.0 International
+
+This project packages and serves the Audio8-ASR-0.1B model released by Edge0 / AutoArk-AI
+under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+
+You are free to:
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+- NonCommercial — You may not use the material for commercial purposes.
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+The original model weights and ONNX runtime code are copyright of their respective authors.
+This server wrapper is provided as-is for convenience of deployment.
