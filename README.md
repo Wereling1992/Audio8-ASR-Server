@@ -49,8 +49,6 @@ curl -X POST http://localhost:8000/asr \
 
 Web UI: http://localhost:8000/
 
-Web UI: http://localhost:8000/
-
 ### OpenAI-compatible API
 
 ```bash
