@@ -1,4 +1,4 @@
-# Audio8 ASR Server
+# audio8-asr-server
 
 A lightweight, **CPU-only** Automatic Speech Recognition service powered by [Audio8-ASR-0.1B](https://huggingface.co/Edge0/Audio8-ASR-0.1B).
 
