@@ -94,29 +94,6 @@ docker run -d -p 8000:8000 -e AUDIO8_API_KEY=MySuperSafeApiKey \
 
 ---
 
-## Publish to Docker Hub (maintainer)
-
-```bash
-cd Audio8-ASR-Server
-
-# 1. Build
-docker build -t wereling1992/audio8-asr-server:latest .
-
-# 2. Login
-docker login
-
-# 3. Push
-docker push wereling1992/audio8-asr-server:latest
-
-# Optional: also tag a version
-docker tag wereling1992/audio8-asr-server:latest wereling1992/audio8-asr-server:1.0.0
-docker push wereling1992/audio8-asr-server:1.0.0
-```
-
-After push, anyone can use the **Quick Start** `docker run` above without building.
-
----
-
 ## Configuration
 
 | Environment variable | Description | Default |
